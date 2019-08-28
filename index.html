@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>Device wrapper for SAC App Design</title>
+    <meta name="description" content="Device wrapper for SAC App Design">
+    <meta name="keywords" content="Device wrapper for SAC App Design">
+	
+	<link href="css/main.css" rel="stylesheet" media="all">
+	<script src="js/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            function fixHeight() {
+                var headerHeight = $("#switcher").height();
+                $("#iframe").attr("height", $(window).height() - headerHeight - 4 + "px"); // Fix scroll bar for desktop monitor.
+            }
+            $(window).resize(function () {
+                fixHeight();
+            }).resize();
+
+            $('.icon-monitor').addClass('active');
+
+            $(".icon-mobile-3").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-3');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-mobile-2").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+
+            $(".icon-mobile-1").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width');
+                $('.icon-tablet,.icon-mobile,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-tablet").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('tablet-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-monitor").click(function () {
+                $("#by").css("overflow-y", "hidden");
+                $('#iframe-wrap').removeClass().addClass('full-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+	<div id="switcher">
+		<div class="center">
+			<ul>
+				<li class="logoTop" id="sj2"><a href="#">View SAC App on deivce:</a>
+				</li>
+				<div id="Device">
+					<li class="device-monitor"><a href="javascript:">
+							<div class="icon-monitor active">
+							</div>
+						</a></li>
+					<li class="device-mobile"><a href="javascript:">
+							<div class="icon-tablet">
+							</div>
+						</a></li>
+					<li class="device-mobile"><a href="javascript:">
+							<div class="icon-mobile-1">
+							</div>
+						</a></li>
+					<li class="device-mobile-2"><a href="javascript:">
+							<div class="icon-mobile-2">
+							</div>
+						</a></li>
+					<li class="device-mobile-3"><a href="javascript:">
+							<div class="icon-mobile-3">
+							</div>
+						</a></li>
+				</div>		
+			</ul>
+		</div>
+	</div>
+	<!-- 
+		Replace the document link below. Contact Ivan.Gong@sap.com for any question.
+	-->
+	<div id="iframe-wrap" class="full-width">
+		<iframe id="iframe" src="https://master-toggle-app-design.eu2cnry.projectorca.cloud/sap/fpa/ui/tenants/fd23e/app.html#;mode=embed;view_id=appBuilding;appId=FECB22ED1DF51D84E1D7C03B8E5E69EB" frameborder="0" width="100%"></iframe>
+	</div>
+	
+</body>
+
+</html>
