@@ -63,6 +63,12 @@
                 $(this).addClass('active');
                 return false;
             });
+			$(':radio').click(function(){
+				var url = $(this).val();
+				$("#iframe").attr('src', url);
+			});
+			
+			
         });
     </script>
 </head>
@@ -96,13 +102,23 @@
 						</a></li>
 				</div>		
 			</ul>
+			<!-- 
+				Add your document link below. Contact Ivan.Gong@sap.com for any question.
+			-->
+			<ul>
+				<li class="apps">
+					<input name="app" type="radio" value="https://master-toggle-app-design.eu2cnry.projectorca.cloud/sap/fpa/ui/tenants/fd23e/app.html#;mode=embed;view_id=appBuilding;appId=FECB22ED1DF51D84E1D7C03B8E5E69EB" /><label>Sample app(for iPad) </label>
+				</li>
+				<li class="apps">
+					<input name="app" type="radio" value="https://master-toggle-app-design.eu2cnry.projectorca.cloud/sap/fpa/ui/tenants/fd23e/app.html#;mode=embed;view_id=appBuilding;appId=BE52F2EDC26CB0C06B997C3086B90B7F" checked="checked" /><label>Sample app(for all devices)</label>
+				</li>
+			</ul>
+			
 		</div>
 	</div>
-	<!-- 
-		Replace the document link below. Contact Ivan.Gong@sap.com for any question.
-	-->
+	
 	<div id="iframe-wrap" class="full-width">
-		<iframe id="iframe" src="https://master-toggle-app-design.eu2cnry.projectorca.cloud/sap/fpa/ui/tenants/fd23e/app.html#;mode=embed;view_id=appBuilding;appId=FECB22ED1DF51D84E1D7C03B8E5E69EB" frameborder="0" width="100%"></iframe>
+		<iframe id="iframe" src="https://master-toggle-app-design.eu2cnry.projectorca.cloud/sap/fpa/ui/tenants/fd23e/app.html#;mode=embed;view_id=appBuilding;appId=BE52F2EDC26CB0C06B997C3086B90B7F" frameborder="0" width="100%"></iframe>
 	</div>
 	
 </body>
