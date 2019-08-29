@@ -9,12 +9,12 @@ There are two SAC apps embed by default. Following below two steps to run the de
 
 Step 1: Open [https://master-toggle-app-design.eu2cnry.projectorca.cloud/](https://master-toggle-app-design.eu2cnry.projectorca.cloud/) with google Chrome browser and login with your credential successfully.
 
-Step 2: Open [https://ivangongsap.github.io/SACViewer/](https://ivangongsap.github.io/SACViewer/) and one SAC app is loaded by default. Then you can switch different devices to view the SAC app.
+Step 2: Open [https://ivangongsap.github.io/SACViewer/](https://ivangongsap.github.io/SACViewer/) and one default SAC sample app is loaded, then you can switch different devices to view the SAC app.
 
 
 ## How to add your own SAC app?
 
-In the file [https://github.com/IvanGongSap/SACViewer/blob/master/index.html](https://github.com/IvanGongSap/SACViewer/blob/master/index.html), add below code.
+Add below code in file [index.html](index.html).
 
 ```bash
 <li class="apps">
