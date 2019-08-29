@@ -2,6 +2,8 @@
 
 #### SAC Viewer is a device simulator web application that view the SAC apps on different device.
 
+![SACViewer](css/img/SACViewer.png "SAC Viewer")
+
 ## How to run?
 There are two SAC apps embed by default. Following below two steps to run the demo.
 
